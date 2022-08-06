@@ -32,7 +32,8 @@ spec:
             memory: 100Mi
         ports:
         - containerPort: 27017
+          protocol: TCP
       volumes:
         - name: mongodb-pvc
           persistentVolumeClaim:
-            claimName: mongopvc-manual
+            claimName: mongo-pvc
